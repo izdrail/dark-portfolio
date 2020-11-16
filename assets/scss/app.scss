@@ -1,0 +1,245 @@
+/*
+Theme Name:     Dark Portfolio
+Theme URI:      https://lzomedia.com/wordpress
+Author:         Stefan Izdrail
+Author URI:     https://lzomedia.com
+Description:    Dark  Portfolio is an awesome dark portfolio wordpress theme
+Version:        1.0
+License: GNU    General Public License v2 or later
+License URI:    https://www.gnu.org/licenses/gpl-2.0.html
+Tags:           one-column, two-columns,
+*/
+
+
+$red:"#ff2641";
+
+
+@import "blocks/old";
+@import "blocks/block-contactInfo";
+@import "blocks/header";
+@import "blocks/footer";
+@import "blocks/menu";
+@import "blocks/team";
+@import "blocks/map";
+@import "blocks/pagination";
+@import "resets/media-768";
+@import "blocks/sidenav";
+@import "blocks/blue-block";
+
+@media screen and (max-width: 768px) {
+  .top-bar {
+    display: none;
+  }
+}
+
+.thumb {
+  a{
+    &:hover{
+      .info{
+        display: block;
+      }
+    }
+  }
+
+  &.featured .info {
+
+    display: block;
+    visibility: visible;
+    opacity: 1;
+
+    .big-title {
+      display: block;
+      font-size: 2em;
+      font-weight: 400;
+      line-height: 1em;
+      letter-spacing: -1px;
+      color: #2D3291;
+      margin-top: 0.3em;
+      max-width: none;
+    }
+
+    .excerpt {
+      margin-top: 2em;
+      margin-bottom: 2em;
+      display: block;
+
+    }
+  }
+  &.featured .info .excerpt {
+    margin-top: 1em;
+    margin-bottom: 1em;
+  }
+  &.dark-overlay .info .big-title {
+    color: #fff;
+  }
+  &.dark-overlay .info {
+    color: #ccd6dd;
+    background-color: #000;
+    background-color: rgba(0, 0, 0, 0.85);
+  }
+  .info {
+    padding: 1vw;
+    display: none;
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: #66757f;
+    background-color: #fff;
+    background-color: rgba(255, 255, 255, 0.85);
+    opacity: 0;
+  }
+  .info .title {
+    padding-bottom: 1.25em;
+
+  }
+  .big-excerpt, &.featured .info .big-title {
+    font-family: "Playfair Display", sans-serif;
+  }
+  .big-excerpt {
+    position: absolute;
+    color: #fff;
+    font-weight: bold;
+  }
+  .info .arrow-right {
+    bottom: 40px;
+  }
+  .photo {
+    position: relative;
+    overflow: hidden;
+
+    a {
+      display: block;
+      overflow: hidden;
+      text-decoration: none;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+    }
+
+    h3{
+      font-size: 1.3rem;
+    }
+  }
+  .info .excerpt {
+    display: block;
+    font-size: 0.875em;
+  }
+
+}
+
+
+.wp-block-column {
+  flex-grow: 1;
+  min-width: 0;
+  word-break: initial !important;
+  overflow-wrap: initial !important;
+
+}
+
+.search__form--submit{
+  width:100%
+}
+.wp-block-embed iframe{
+  width: 100%;
+}
+.wp-block-column p{
+  color:#F0F8FB;
+}
+
+h1.title__page--archive{
+  text-transform: capitalize;
+}
+.owl-carousel .owl-next, .owl-carousel .owl-prev {
+  position: absolute;
+  z-index: 5;
+  top: 50%;
+  width: 84px;
+  height: 40px;
+  margin-top: -20px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  color: #8899a6;
+}
+.owl-next{
+  right: -42px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAAAUCAYAAAA9djs/AAAABmJLR0QAAAAAAAD5Q7t/AAAAUElEQVR42u2YsQ0AIAzD+gK3cA8fc0tfSIvEzk5sKQfYQ4dGfIqk1ZvhyJU/pGWElh69TQQiEIEIRCDCI4K8SQJwB5BHHnnkkUeeh4jrS6wA3e4jBl5RAlYAAAAASUVORK5CYII=);
+}
+.owl-prev{
+  right: -42px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjxzdmcgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCIgd2lkdGg9IjY0cHgiIGhlaWdodD0iMjBweCIgdmlld0JveD0iMCAwIDY0IDIwIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA2NCAyMDsiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPHBvbHlnb24gcG9pbnRzPSI5LjEsMCAxMC42LDEuNSAzLjQsOSA2NCw5IDY0LDExIDMuNCwxMSAxMC43LDE4LjUgOS4xLDIwIDAsMTAuNyAwLDkuMyAiIHN0eWxlPSJmaWxsOiNmZmZmZmYiLz4NCjwvc3ZnPg==),none;
+}
+
+
+.slider-services{
+
+  padding-top:5vh;
+  padding-bottom: 0vh;
+
+  div.title{
+
+    perspective: 5vh;
+    position: relative;
+
+    h2{
+      text-align:center;
+      font-size: 2.50em;
+      perspective: 100px;
+      transform-style: preserve-3d;
+      transform: rotateX(20deg);
+      letter-spacing: 4px;
+      word-spacing: -8px;
+      color: white;
+      text-shadow:
+              -1px -1px 0 #2D3291,
+              -2px -2px 0 #2D3291,
+              -3px -3px 0 #FF2641,
+              -4px -4px 0 #2D3291,
+              -5px -5px 0 #FF2641,
+              -6px -6px 0 #2D3291,
+              -7px -7px 0 #2D3291,
+              -8px -8px 0 #2D3291,
+              -30px 20px 40px dimgrey
+    }
+  }
+
+
+  div.subtitle{
+    padding-top:5vh;
+    padding-bottom:5vh;
+    font-size:1.5em;
+    text-align:center;
+  }
+
+}
+
+.type-services{
+  font-size:1.2rem;
+}
+
+main{
+  padding-bottom: 20vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+main.blog{
+  padding-bottom: 25vh;
+}
+
+.fa-github{
+  font-size:5rem;
+}

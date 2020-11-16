@@ -1,0 +1,34 @@
+@media print {
+  h2, h3, p {
+    orphans: 3;
+    widows: 3;
+  }
+
+  #content, #footer, html {
+    background: 0 0;
+  }
+
+  #top .site-menu-toggle {
+    display: none;
+  }
+
+  h2, h3 {
+    page-break-after: avoid;
+  }
+
+  blockquote, pre {
+    page-break-inside: avoid;
+  }
+
+  abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+
+  a {
+    text-decoration: underline;
+
+    &:visited {
+      text-decoration: underline;
+    }
+  }
+}

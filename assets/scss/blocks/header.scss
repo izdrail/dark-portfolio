@@ -1,0 +1,29 @@
+header#header{
+  background-color: #2d3291 !important;
+  //padding:3vh 0vh;
+  min-height: 18vh;
+  #logo-block{
+    text-align: center;padding-top:3vh;
+    a:hover{
+      text-decoration: none;
+      span{
+        color: white;font-style: italic;font-size: 2rem;
+      }
+    }
+
+  }
+  .press-logo{
+
+    height: 12vh;
+  }
+
+
+  @media screen and (max-width: 768px) {
+    min-height: 12vh;
+    color:#f8f8f8;
+  }
+
+
+  position: relative;
+  z-index: 2;
+}

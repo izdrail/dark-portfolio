@@ -1,0 +1,48 @@
+{
+  "name": "lzomedia/dark-portfolio",
+  "type": "wordpress-theme",
+  "license": "MIT",
+  "description": "WordPress dark theme with a modern development workflow",
+  "homepage": "https://lzomedia.com/wordpress/",
+  "authors": [
+    {
+      "name": "Stefan Izdrail",
+      "email": "stefan@lzomedia.com",
+      "homepage": "https://github.com/lzomedia"
+    }
+  ],
+  "keywords": [
+    "wordpress"
+  ],
+  "support": {
+    "issues": "https://github.com/lzomedia/dark-portfolio/issues",
+    "forum": "https://discourse.roots.io/"
+  },
+  "autoload": {
+    "psr-4": {
+      "App\\": "app/"
+    }
+  },
+  "require": {
+    "php": "^7.2.5"
+  },
+  "require-dev": {
+  },
+  "suggest": {
+  },
+  "config": {
+    "optimize-autoloader": true,
+    "preferred-install": "dist",
+    "sort-packages": true
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "scripts": {
+    "lint": [
+      "phpcs --ignore=index.php,vendor,resources,storage,dist --extensions=php --standard=PSR12 ."
+    ],
+    "post-autoload-dump": [
+      "Roots\\Acorn\\ComposerScripts::postAutoloadDump"
+    ]
+  }
+}

@@ -1,0 +1,22 @@
+.contactInfo{
+  padding:1vw;
+  .contact-address-info {
+    position: relative;
+    margin-bottom: 2.4em;
+    padding-left:2vw;
+    &:last-child {
+      margin-bottom: 0;
+    }
+    i {
+      position: absolute;
+      top: 1;
+      left: 0;
+      font-size: 2em;
+      color: #2D3291;
+    }
+  }
+  .contact-address-info i, .fa-li:before {
+    color: #fff;
+  }
+
+}
