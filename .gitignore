@@ -28,7 +28,7 @@
 .bashrc
 .contactemail
 .cpanel/
-node_modules
+node_modules/
 .dns
 .emacs
 .gitconfig
