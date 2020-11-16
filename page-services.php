@@ -6,7 +6,7 @@ get_header();
 ?>
 
 
-<main>
+<main style="overflow-x: hidden">
 	<?php while ( have_posts() ) : the_post(); ?>
 		<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id(), 'full' ); ?>
         <section class="bgimage" style="background-image:linear-gradient(rgba(0, 0, 0, 0.8),rgba(0, 0, 0, 0.8)), url(<?php echo $image[0];?>)">
@@ -33,9 +33,5 @@ get_header();
             </div>
         </section>
 	<?php endwhile; ?>
-
-
 </main>
-
-
 <?php get_footer(); ?>

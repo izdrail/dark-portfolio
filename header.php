@@ -23,7 +23,7 @@
           integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 	<?php wp_head(); ?>
 </head>
-<body <?php body_class(); ?>>
+<body <?php body_class(); ?> style="overflow-x: hidden">
 
 <div class="top-bar navbar-fixed-top sticky ">
     <div class="container fullwidth">

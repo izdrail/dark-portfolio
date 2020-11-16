@@ -19,12 +19,14 @@ $red:"#ff2641";
 @import "blocks/header";
 @import "blocks/footer";
 @import "blocks/menu";
-@import "blocks/team";
 @import "blocks/map";
 @import "blocks/pagination";
 @import "resets/media-768";
 @import "blocks/sidenav";
 @import "blocks/blue-block";
+
+
+
 
 @media screen and (max-width: 768px) {
   .top-bar {
@@ -195,10 +197,10 @@ h1.title__page--archive{
 
     h2{
       text-align:center;
-      font-size: 2.50em;
+      font-size: 1.50em;
       perspective: 100px;
       transform-style: preserve-3d;
-      transform: rotateX(20deg);
+      transform: rotateX(15deg);
       letter-spacing: 4px;
       word-spacing: -8px;
       color: white;

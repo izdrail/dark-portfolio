@@ -65,11 +65,9 @@
                 </p>
             </div>
         </div>
-
         </div>
     </div>
 	<?php wp_footer(); ?>
-
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -107,31 +105,23 @@
             "closes": "23:59"
         }
     }
-
     </script>
     <script>
         function openNav() {
             document.getElementById("mySidenav").style.width = "100%";
         }
-
         function closeNav() {
             document.getElementById("mySidenav").style.width = "0";
         }
-
     </script>
-
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-104076476-1"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-
         gtag('config', 'UA-104076476-1');
     </script>
-
 </footer>
-
-
 </body>
 </html>
