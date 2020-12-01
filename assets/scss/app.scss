@@ -35,6 +35,7 @@ $red:"#ff2641";
 }
 
 .thumb {
+
   a{
     &:hover{
       .info{
@@ -111,7 +112,6 @@ $red:"#ff2641";
   .photo {
     position: relative;
     overflow: hidden;
-
     a {
       display: block;
       overflow: hidden;
@@ -135,24 +135,32 @@ $red:"#ff2641";
 }
 
 
-.wp-block-column {
-  flex-grow: 1;
-  min-width: 0;
-  word-break: initial !important;
-  overflow-wrap: initial !important;
+.wp-block-group__inner-container{
+
+  .wp-block-columns{
+
+    .wp-block-column {
+      flex-grow: 1;
+      min-width: 0;
+      word-break: initial !important;
+      overflow-wrap: initial !important;
+    }
+    .wp-block-embed iframe{
+      width: 100%;
+    }
+    .wp-block-column p{
+      color:#F0F8FB;
+    }
+
+  }
 
 }
+
+
 
 .search__form--submit{
   width:100%
 }
-.wp-block-embed iframe{
-  width: 100%;
-}
-.wp-block-column p{
-  color:#F0F8FB;
-}
-
 h1.title__page--archive{
   text-transform: capitalize;
 }
