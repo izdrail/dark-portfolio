@@ -36,9 +36,9 @@
             </div>
 
             <div class="col-sm-4">
-                <h1 style="color: white;font-style: italic;font-size: 22px;padding-top: 5px;text-align: center">
+                <h2 style="color: white;font-style: italic;font-size: 22px;padding-top: 5px;text-align: center">
 					<?php bloginfo( 'name' ); ?>
-                </h1>
+                </h2>
             </div>
             <div class="col-sm-4">
                 <a title="web development company contact email" href="<?php echo esc_url( home_url( '/contact' ) ); ?>"
