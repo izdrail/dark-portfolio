@@ -9,10 +9,10 @@ get_header();
 
 ?>
 
-<section class="site__main row">
+<main style="overflow-x: hidden" class="site__main row">
 	<?php while ( have_posts() ) : the_post(); ?>
 		<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id(), 'full' ); ?>
-        <section class="bgimage" style="background-image: linear-gradient(rgba(0, 0, 0, 0.8),rgba(0, 0, 0, 0.8)), url(<?php echo $image[0];?>)">
+        <div class="bgimage" style="background-image: linear-gradient(rgba(0, 0, 0, 0.8),rgba(0, 0, 0, 0.8)), url(<?php echo $image[0];?>)">
             <div class="container-md">
                 <div class="row">
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding-top:15vh;padding-bottom: 15vh">
@@ -25,8 +25,8 @@ get_header();
                     </div>
                 </div>
             </div>
-        </section>
-        <section class="container" style="margin-bottom: 5vh">
+        </div>
+        <div class="container" style="padding-left:30px; margin-bottom: 5vh">
             <div class="row">
                 <div class="col-lg-12">
                     <div class="entry__meta" style="text-align: center;font-size: 1.6rem;">
@@ -48,8 +48,8 @@ get_header();
                     </main><!-- #primary -->
                 </div>
             </div>
-        </section><!-- .container-md -->
+        </div><!-- .container-md -->
 	<?php endwhile; ?>
-</section><!-- .site__main -->
+</main><!-- .site__main -->
 
 <?php get_footer(); ?>

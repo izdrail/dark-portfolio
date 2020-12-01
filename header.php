@@ -138,6 +138,11 @@
         <div class="container-fluid">
             <div id="mySidenav" class="sidenav">
                 <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <div class="col-sm-4">
+                    <h2 style="color: white;font-style: italic;font-size: 22px;padding-top: 5px;text-align: center">
+                        <?php bloginfo( 'name' ); ?>
+                    </h2>
+                </div>
                 <div>
 		            <?php
 		            wp_nav_menu( array(
@@ -146,6 +151,19 @@
 		            ) );
 		            ?>
                 </div>
+
+                <div class="small-buttons" style="padding-left:25px;">
+                    <a title="web development company contact phone"
+                       href="tel:<?php echo get_theme_mod( 'phone_number' ); ?>" class=" btn--dark-gray ">
+                        <i class="fa fa-phone fa-3x"></i>
+                    </a>
+
+                    <a title="web development company contact email" href="<?php echo esc_url( home_url( '/contact' ) ); ?>"
+                       class=" btn--dark-blue">
+                        <i class="fa fa-envelope fa-3x"></i>
+                    </a>
+                </div>
+
             </div>
         </div><!-- /.container-fluid -->
     </nav>
