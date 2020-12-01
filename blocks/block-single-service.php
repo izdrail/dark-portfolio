@@ -1,16 +1,13 @@
 <div class="box" style="margin-bottom: 3vh">
 	<div class="thumb dark-overlay">
 		<div class="photo">
-			<a href="<?php echo block_value('link');?>" title="<?php echo block_value('title');?> london">
-
-
-
+			<a target="_self" href="<?php echo block_value('link');?>" title="<?php echo block_value('title');?> london">
 				<?php
 				$attachment_id = block_value( 'background' );
 				echo wp_get_attachment_image( $attachment_id, 'medium' );
 				?>
 				<div class="info">
-					<h3 class="title" title="php development company">
+					<h3 class="title" title="<?php echo block_value('title');?>">
 						<?php echo block_value('title');?>
 					</h3>
 					<div class="excerpt">
