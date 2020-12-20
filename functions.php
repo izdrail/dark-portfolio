@@ -161,3 +161,28 @@ add_action( 'customize_register', 'your_theme_new_customizer_settings' );
 
 add_post_type_support( 'page', 'excerpt' );
 
+
+
+function custom_redirects() {
+    $redirect_rules = array(
+        array('old'=>'/javascript-development-company','new'=>'/services/javascript-development-company'),
+        array('old'=>'/golang-development-company','new'=>'/services/golang-development-company'), // page
+        array('old'=>'/laravel-development-company','new'=>'/services/laravel-development-company'), // page
+        array('old'=>'/codeigntier-development-company','new'=>'/services/codeigntier-development-company'), // page
+        array('old'=>'/symfony-development-company','new'=>'/services/symfony-development-company'), // page
+        array('old'=>'/drupal-development-company','new'=>'/services/drupal-development-company'), // page
+        array('old'=>'/magento-development-company','new'=>'/services/magento-development-company'), // page
+        array('old'=>'/reactjs-development-company','new'=>'/services/reactjs-development-company'), // page
+        array('old'=>'/vuejs-development-company','new'=>'/services/vuejs-development-company'), // page
+        array('old'=>'/python-development-company','new'=>'/services/python-development-company'), // page
+        array('old'=>'/angularjs-development-company','new'=>'/services/angularjs-development-company'), // page
+    );
+    foreach( $redirect_rules as $rule ) :
+        if( urldecode($_SERVER['REQUEST_URI']) == $rule['old'] ) :
+            wp_redirect( home_url( $rule['new'] ), 301 );
+            exit();
+        endif;
+    endforeach;
+}
+
+add_action('template_redirect', 'custom_redirects');
